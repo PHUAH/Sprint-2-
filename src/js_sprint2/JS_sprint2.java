@@ -14,22 +14,21 @@ public class JS_sprint2 {
                                                       ,new Order_Delivery("D265",sdf.format(cal.getTime()),"Kepong"," ","Peter"));
     
     public void delivery_time(){
-       System.out.print("Enter your orderID:");
+       System.out.print("Enter your DeliveryID:");
        Scanner scanner = new Scanner (System.in);
        String deliveryid = scanner.next();
        while(deliveryid.length()!= 4||deliveryid.equals(" "))
         {
-        System.out.print("Invalid Input! \nEnter your OrderID: ");
+        System.out.print("Invalid Input! \nEnter your DeliveryID: ");
         deliveryid = scanner.next();
         }
        while(!deliveryid.equals(Delivery_order.get(0).getDeliveryID())&&!deliveryid.equals(Delivery_order.get(1).getDeliveryID())&&!deliveryid.equals(Delivery_order.get(2).getDeliveryID()))
        {
-           System.out.print("Order ID not found! \nEnter your OrderID: ");
+           System.out.print("Delivery ID not found! \nEnter your DeliveryID: ");
            deliveryid = scanner.next();
          while(deliveryid.length()!= 4||deliveryid.equals(" "))
          {
-             
-         System.out.print("Invalid Input! \nEnter your OrderID: ");
+         System.out.print("Invalid Input! \nEnter your DeliveryID: ");
          deliveryid = scanner.next();
          }
        }
